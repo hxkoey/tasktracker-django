@@ -25,7 +25,7 @@ def index(request):
         )
 
     # Create table with pages
-    p = Paginator(queryset, 5)
+    p = Paginator(queryset.order_by('id'), 5)
     page_num = request.GET.get('page',1)
 
     try:

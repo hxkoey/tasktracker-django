@@ -1,5 +1,4 @@
 aiohttp==3.7.3
-alpha-vantage==2.2.0
 argon2-cffi==20.1.0
 async-timeout==3.0.1
 attrs==20.3.0

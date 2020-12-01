@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasktrackerApp',
     'crispy_forms',
-    'registration',
-
 ]
 
 MIDDLEWARE = [
@@ -132,16 +130,16 @@ STATICFILES_DIRS = [STATIC_DIR,]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-# Registration
-ACCOUNT_ACTIVATION_DAYS= 7
-REGISTRATION_AUTO_LOGIN= True
-LOGIN_REDIRECT_URL= '/'
-
-#email settings
-EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST= "smtp.gmail.com"
-EMAIL_HOST_USER= "abc@gmail.com"
-EMAIL_HOST_PASSWORD= "password"
-EMAIL_PORT= 587
-EMAIL_USE_TLS= True
-DEFAULT_FROM_EMAIL= "abc@gmail.com"
+# # Registration
+# ACCOUNT_ACTIVATION_DAYS= 7
+# REGISTRATION_AUTO_LOGIN= True
+# LOGIN_REDIRECT_URL= '/'
+#
+# #email settings
+# EMAIL_BACKEND= "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST= "smtp.gmail.com"
+# EMAIL_HOST_USER= "abc@gmail.com"
+# EMAIL_HOST_PASSWORD= "password"
+# EMAIL_PORT= 587
+# EMAIL_USE_TLS= True
+# DEFAULT_FROM_EMAIL= "abc@gmail.com"

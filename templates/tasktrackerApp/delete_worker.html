@@ -1,0 +1,26 @@
+{% extends 'tasktrackerApp/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block bodyblock%}
+
+<div class="jumbotron" align="center">
+  <h1>{{title}}</h1><br>
+
+  <form class="" action="" method="POST">
+    {% csrf_token %}
+    <div class="row" align="center">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+        <input type="submit" class="btn btn-danger fullbutton" name="" value="Yes I am sure"><br><br>
+      </div>
+      <div class="col-sm-5">
+        <a href="/list_workers"><button type="button" class="btn btn-secondary fullbutton" name="button">No, cancel</button></a>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+  </form>
+</div>
+
+{% endblock%}

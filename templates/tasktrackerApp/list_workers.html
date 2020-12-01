@@ -1,0 +1,32 @@
+{% extends 'tasktrackerApp/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block bodyblock%}
+
+<div class="jumbotron" align="center">
+  <h1>{{title}} <img src="{% static 'img/people.png' %}" alt="People PNG" width=100px> </h1><br>
+
+  <table class='table'>
+    <thead class='thead-dark'>
+      <tr>
+        <th>Count</th>
+        <th>Employee</th>
+        <th>Class</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+
+    {% for row in queryset %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{row.name}}</td>
+      <td>{{row.level}}</td>
+      <td><a href="{% url 'tasktrackerApp:delete_worker' row.id %}"> <img src="{% static 'img/delete.png' %}" alt="DELETE" width=20px></a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <a href="/add_worker"><button type="button" name="button" class="btn btn-primary mybutton">Add Worker</button></a>
+
+{% endblock%}

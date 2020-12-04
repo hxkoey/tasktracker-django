@@ -52,7 +52,7 @@
             <a href="{% url 'tasktrackerApp:index' %}?page={{ page.previous_page_number }}"><< Previous Page</a>
           {% endif %}
           {% if page.has_next %}
-            <a href="{% url 'tasktrackerApp:index' %}?page={{ page.next_page_number }}">>> Next Page</a>
+            <a href="{% url 'tasktrackerApp:index' %}?page={{ page.next_page_number }}">Next Page>> </a>
           {% endif %}
         </div>
 
